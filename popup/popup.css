@@ -1,0 +1,140 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  width: 480px;
+  height: auto;
+  background-color: #0A249D;
+  color: white;
+  background: linear-gradient(to bottom, #0A249D, #0C4AB4);
+}
+
+#header {
+  font-family: "Roboto Slab";
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title {
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav {
+  letter-spacing: 1px;
+  display: flex;
+  gap: 15px;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 5px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#letter-grade {
+  color: #C6FCEC;
+  font-size: 58px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.grade-summary {
+  font-size: 13px;
+  text-align: left;
+  line-height: 22px;
+  width: 360px;
+  margin-bottom: 40px;
+}
+.dropdown-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-family: "Roboto";
+  background: transparent;
+  color: white;
+  padding: 5px;
+  width: 400px;
+  text-align: left;
+  border: white 1px solid;
+  outline: none;
+  transition: 0.4s;
+}
+
+.category:hover {
+  background-color: #C6FCEC;
+  color: #0A249D;
+}
+
+.detailed-content {
+  text-align: left;
+  display: none;
+  padding: 0 18px;
+  width: 400px;
+  color: white;
+  overflow: hidden;
+}
+
+.avoid-button {
+  font-weight: 500;
+  font-size: 12px;
+  font-family: "Roboto";
+  background: #C6FCEC;
+  color: #0A249D;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.avoid-button:hover {
+  background-color: #e1fcf4;
+  color: #0A249D;
+}
+
+i .fa-solid {
+  color: white;
+}
+
+i:hover {
+  color: #0A249D;
+}
+
+.fa-file-invoice,
+.fa-database,
+.fa-key,
+.fa-money-bill-transfer,
+.fa-lock {
+  margin-right: 10px;
+}
+
+
+footer {
+  margin-left: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}

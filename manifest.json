@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Grader",
+  "version": "1.0",
+  "description": "Summarize privacy policies in a clear and concise manner",
+  "icons": {
+    "16": "images/lock-16.png",
+    "32": "images/lock-32.png",
+    "48": "images/lock-48.png"
+  }, 
+  "permissions": ["storage", "activeTab", "scripting","tabs", "notifications"],
+  "host_permissions": ["https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["scripts/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icons": {
+    "16": "images/lock-16.png",
+    "32": "images/lock-32.png",
+    "48": "images/lock-48.png"
+    }
+  }
+}

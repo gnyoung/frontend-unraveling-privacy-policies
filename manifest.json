@@ -3,21 +3,19 @@
   "name": "Privacy Grader",
   "version": "1.0",
   "description": "Summarize privacy policies in a clear and concise manner",
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting","tabs", "notifications"],
+  "host_permissions": ["https://*/*", "http://127.0.0.1/*", "http://localhost/*"],
   "icons": {
     "16": "images/lock-16.png",
     "32": "images/lock-32.png",
     "48": "images/lock-48.png"
   }, 
-  "permissions": ["storage", "activeTab", "scripting","tabs", "notifications"],
-  "host_permissions": ["https://*/*"],
-  "content_scripts": [
-    {
-      "matches": ["https://*/*"],
-      "js": ["scripts/content.js"]
-    }
-  ],
   "action": {
     "default_popup": "popup/popup.html",
+    "default_title": "Action Button",
     "default_icons": {
     "16": "images/lock-16.png",
     "32": "images/lock-32.png",

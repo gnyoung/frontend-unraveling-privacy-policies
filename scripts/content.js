@@ -16,8 +16,9 @@ const removeHiddenText = (node) => {
   while (walker.nextNode()) {
     text += walker.currentNode.textContent + " ";
   }
-  console.log(text);
-  await chrome.runtime.sendMessage({ text: text }, (response) => {
+  // console.log(text);
+  
+  await chrome.runtime.sendMessage({ website: location.href, text: text }, (response) => {
     console.log(response);
   });
 })();

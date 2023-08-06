@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="popup.css">
   <link rel="stylesheet" href="../all.css">
   <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <link href="../css/all.min.css" rel="stylesheet">
 </head>
 <body class="root">
@@ -15,9 +15,9 @@
       <p class="logo-title">PRIVACY GRADER</p>
     </div>
     <nav>
-      <div id="scan-button-container"> 
+      <!-- <div id="scan-button-container"> 
         <button id="scan-button">SCAN</button>
-      </div>
+      </div> -->
       <div id="nav-links-container">
         <a class="nav-link">AVOIDED SITES</a>
         <a class="nav-link">ABOUT</a>
@@ -26,8 +26,10 @@
   </div>
   <div class="main-content">
     <div class="score-section">
-      <p id="letter-grade">B+</p>
-      <p class="grade-summary">This privacy policy provides clear information about user rights and choices, including options to access, correct, delete, or restrict personal data. To improve, the policy should include details on data retention and data security measures.</p>
+      <button id="scan-button">SCAN</button>
+      <div id="loader"></div>
+      <p id="letter-grade"></p>
+      <p id="grade-summary"></p>
     </div>
     <div class="dropdown-section">
       <button class="category">
@@ -38,7 +40,7 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
       <div class="detailed-content">
-        <p class="content">Lorem ipsum...</p>
+        <p id="content-collection" class="content"></p>
       </div>
       <button class="category">
         <span class="icon-and-category">
@@ -48,7 +50,7 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
       <div class="detailed-content">
-        <p class="content">Lorem ipsum...</p>
+        <p id="content-storage" class="content"></p>
       </div>
       <button class="category">
         <span class="icon-and-category">
@@ -58,7 +60,7 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
       <div class="detailed-content">
-        <p class="content">Lorem ipsum...</p>
+        <p id="content-rights" class="content"></p>
       </div>
       <button class="category">
         <span class="icon-and-category">
@@ -68,9 +70,9 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
       <div class="detailed-content">
-        <p class="content">Lorem ipsum...</p>
+        <p id="content-disclosure" class="content"></p>
       </div>
-      <button class="category">
+      <button class="category" id="last-category">
         <span class="icon-and-category">
           <i class="fa-solid fa-lock"></i>
           DATA SECURITY
@@ -78,12 +80,12 @@
         <i class="fa-solid fa-chevron-down"></i>
       </button>
       <div class="detailed-content">
-        <p class="content">Lorem ipsum...</p>
+        <p id="content-security" class="content"></p>
       </div>
     </div>
   </div>
   <footer> 
-    <button class="avoid-button">Mark as avoid</button>
+    <button id="avoid-button">Mark as avoid</button>
   </footer>
   <script src="popup.js"></script>
 </body>

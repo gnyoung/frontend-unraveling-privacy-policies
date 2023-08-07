@@ -7,7 +7,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
         chrome.notifications.create("", {
           type: "basic",
           title: "Are you sure you want to visit this site?",
-          message: "This site on your avoid list with Privacy Grader.",
+          message: "This site is on your avoid list with Privacy Grader.",
           iconUrl: "images/logo-lock-48.png",
         });
       }

@@ -1,0 +1,40 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.root {
+  width: 480px;
+  height: 520px;
+  background-color: white;
+  color: #273A69;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: flex-start;
+}
+
+.about-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #00C6C0;
+  margin: 20px;
+  margin-left: 10px;
+}
+
+#about-list {
+  margin-top: 0;
+  text-align: left;
+}
+
+#about-instructions {
+  margin-bottom: 10px;
+}
+

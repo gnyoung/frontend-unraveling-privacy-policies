@@ -15,6 +15,7 @@ const state = {
 const toggleCategories = (event) => {
   const currentButton = event.target;
   const categoryContent = currentButton.nextElementSibling;
+
   if (categoryContent.classList.contains("detailed-content")) {
     if (categoryContent.style.display == "block") {
             categoryContent.style.display = "none";
@@ -27,14 +28,19 @@ const toggleCategories = (event) => {
 const saveWebsite = async () => {
   const tab = await chrome.tabs.query({active: true, lastFocusedWindow: true});
   const tabUrl = tab[0].url;
-
-  chrome.storage.sync.set({tabUrl: tabUrl});
+  
+  chrome.storage.sync.get(tabUrl, (items) => {
+    if (!items[tabUrl]) {
+      chrome.storage.sync.set({[tabUrl]: true});
+      alert("This website has been added to your avoid list.");
+    }
+  });
 }
 
 const loadContentScript = async () => {
   const tab = await chrome.tabs.query({active: true, lastFocusedWindow: true});
   const activeTabId = tab[0].id;
-
+  
   chrome.scripting.executeScript({
     target: {tabId: activeTabId},
     files: ["scripts/content.js"]
@@ -68,16 +74,13 @@ const showSummary = (responseBody) => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const text = message.text;
-
   if (text) {
     sendResponse("Text received.");
   }
 
   const requestHeaders = new Headers();
   requestHeaders.append("Content-Type", "application/json");
-
   const requestData = JSON.stringify(message);
-
   const requestOptions = {
     method: 'POST',
     headers: requestHeaders,
@@ -100,6 +103,7 @@ const registerEvents = () => {
   });
   state.scanButton.addEventListener("click", loadContentScript);
   state.scanButton.addEventListener("click", startLoading);
+  state.avoidButton.addEventListener("click", saveWebsite);
 };
 
 document.addEventListener("DOMContentLoaded", registerEvents);

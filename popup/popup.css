@@ -83,6 +83,7 @@ img {
   border-radius: 5px;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-link:hover {

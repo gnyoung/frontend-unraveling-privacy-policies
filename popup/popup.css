@@ -19,6 +19,7 @@ body, html {
   justify-content: space-between;
   background-color: #273A69;
   padding: 10px; 
+  height: 44px;
 }
 
 .logo {
@@ -31,7 +32,7 @@ body, html {
   font-family: "Roboto Slab";
   color: white;
   letter-spacing: 1.5px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -46,6 +47,7 @@ img {
   width: 32px;
   height: 32px;
   margin-bottom: 5px;
+  color: white;
 }
 
 #scan-button {
@@ -70,7 +72,7 @@ img {
 }
 
 #nav-links-container {
-  margin-top: 24px;
+  margin-top: 15px;
   display: flex;
   gap: 15px;
 }
@@ -84,7 +86,6 @@ img {
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  margin-bottom: 22px;
 }
 
 .nav-link:hover {
@@ -99,7 +100,7 @@ img {
 }
 
 #loader {
-  border: 16px solid #f3f3f3; 
+  border: 16px solid #e1e5e9; 
   border-top: 16px solid #00C6C0; 
   border-radius: 50%;
   width: 120px;
@@ -127,7 +128,7 @@ img {
 
 #grade-summary {
   font-size: 14px;
-  color: 221E28;
+  color: #273A69;
   text-align: left;
   line-height: 24px;
   width: 360px;
@@ -190,16 +191,11 @@ img {
 }
 
 #avoid-button:hover {
-  color: #00ada7;
-  border-color: #00ada7;
+  color: #00C6C0;
 }
 
 i .fa-solid {
   color: white;
-}
-
-i:hover {
-  color: #0A249D;
 }
 
 .fa-file-invoice,

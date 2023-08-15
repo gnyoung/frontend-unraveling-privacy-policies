@@ -15,7 +15,7 @@ body, html {
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 198, 192, 0.7);
+  background-color: rgba(0, 198, 192, 0.8);
   padding: 10px;
   height: 44px; 
 }
@@ -71,7 +71,7 @@ body, html {
 }
 
 li {
-  border: #e1e5e9 solid 1.5px;
+  border: #d6dbe1 solid 1.5px;
   padding: 10px; 
   display: flex;
   border-radius: 4px;
